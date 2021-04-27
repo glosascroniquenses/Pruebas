@@ -31,4 +31,8 @@ a:hover {
     text-decoration: underline;
     'Este es el formato de las pestañas'
 }
-    
+
+h5 {
+    font-size: 10px;
+    font-family:'Trebuchet MS', 'Helvetica', 'Sans-Serif';
+}
