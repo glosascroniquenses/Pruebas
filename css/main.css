@@ -32,3 +32,10 @@ a:hover {
     'Este es el formato de las pestañas'
 }
     
+h16 {
+    font-size: 30px;
+    font-family:'Trebuchet MS', 'Helvetica', 'Sans-Serif';
+    color: #750C41;
+
+}
+
