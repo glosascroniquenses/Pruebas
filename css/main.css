@@ -22,3 +22,12 @@ nav ul li {
     float: none;
     'Este es el formato de las pestañas'
 }
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+    
+}
+a:hover {
+    text-decoration: underline;
+}
