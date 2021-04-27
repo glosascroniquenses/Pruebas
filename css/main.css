@@ -4,3 +4,12 @@ body {
     background-image: url("/Pruebas/Fotos/fondo.jpg");
     'Aquí va el fondo de la página'
 }
+
+h1 {
+    font-size: 100px;
+    font-family:'Lucida Sans Unicode', 'Lucida Grande', 'Sans-Serif';
+    color: #750C41;
+    text-align: center;
+    line-height: 120px;
+    'Este es ek formato del TÍTULO DEL PROYECTO'
+}
