@@ -11,5 +11,14 @@ h1 {
     color: #750C41;
     text-align: center;
     line-height: 120px;
-    'Este es eL formato del TÍTULO DEL PROYECTO'
+    'Este es el formato del TÍTULO DEL PROYECTO'
+}
+
+nav ul li {
+    display: inline;
+    background-color:#D41C62;
+    border-radius:10px;
+    display: inline-block;
+    float: none;
+    'Este es el formato de las pestañas'
 }
