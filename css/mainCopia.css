@@ -49,3 +49,40 @@ p {
     text-align: justify;
 'Este es el formato para la bibliografía del texto en la página donde se listan a los cronistas'
 }
+
+#autores {
+  display:block;
+  background: hsla(30,25%,50%,.1);
+  width: 15%;
+  margin-right: 2em;
+  padding: 2em;
+  position: absolute;
+  right: 0;
+  font-family:'Trebuchet MS', 'Helvetica', 'Sans-Serif';
+  font-size: 1.2 rem;
+
+  h1 {
+    font-size: 1rem;
+    margin:0;
+    font-weight: normal;
+    border-bottom: 1px solid rgba(black,.2);
+  }
+
+  
+  a {
+    display:block;
+    font-size: 1.2 rem;
+  }
+}
+
+#palabras 
+  {display:flex;h2 
+  {font-size:1.25rem;
+  }
+  }
+
+#palabras-nav 
+  {width: 20%;font-size: .825rem; a,:link 
+  {display:block;text-decoration:none;color: #800;
+  }
+  }
