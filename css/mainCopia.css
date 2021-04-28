@@ -50,6 +50,17 @@ p {
 'Este es el formato para la bibliografía del texto en la página donde se listan a los cronistas'
 }
 
+#main {
+  padding: 2em;
+  display:flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.content {
+    width: 80%;
+}
+
 #palabras {
   display:flex;
 
