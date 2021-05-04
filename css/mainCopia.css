@@ -61,7 +61,7 @@ p {
     width: 80%;
 }
 
-#palabras {
+#palabras2 {
   display:flex;
 
   h3 {
@@ -69,7 +69,7 @@ p {
   }
 }
 
-#palabras-nav {
+#palabras2-nav {
    width: 40%;
   font-size: 1.25rem;
   a,:link {
