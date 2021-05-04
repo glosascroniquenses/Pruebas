@@ -61,7 +61,7 @@ p {
     width: 80%;
 }
 
-#palabras2 {
+#palabras {
   display:flex;
 
   h3 {
@@ -69,7 +69,7 @@ p {
   }
 }
 
-#palabras2-nav {
+#palabras-nav {
    width: 40%;
   font-size: 1.25rem;
   a,:link {
@@ -78,35 +78,35 @@ p {
   }
 }
 
-#tables2 {
+#tables {
   width: 66%;
 }
 
-#tables2 section {
+#tables section {
   display:none;
 }
 
-#tables2 section:target {
+#tables section:target {
   display:block;
 }
 
-#tables2 table {
+#tables table {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: .825rem;
 }
 
-#tables2 td {
+#tables td {
     padding: 5px 10px;
 }
 
-#tables2 thead th {
+#tables thead th {
     background: #585858;
     color: white;
     padding: 5px 10px;
     line-height: 1.25;   
 }
 
-#tables2 tbody td {
+#tables tbody td {
     background: #efefef;
     background: rgba(0,0,0,0.063);
     min-width: 100px;
