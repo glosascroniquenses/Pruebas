@@ -38,6 +38,34 @@ layout: default
       </nav>
       'Aquí se extraen las palabras del archivo csv de la carpeta Data. Se genera el link que lleva al detalle de la glosa por palabra. Las palabras son de color blanco.'
 	 
+	    <div id="tables2">
+      {% for word in unique_word_array %}
+	<section id="{{ word | downcase }}">
+        <h2>{{ word }}</h2>
+    	<table>
+          <thead>
+            <tr>
+              <th>Texto pag No</th>
+	      <th>Cita</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for row in rows %}
+          {% if row.Palabra == word %}
+            <tr>
+              <td>{{ row.pagina }}</td>
+              <td>{{ row.cita }}</td>
+            </tr>
+          {% endif %}
+          {% endfor %}
+      </tbody>
+    </table>
+    </section>
+    {% endfor %}
+     
+	   </div>
+	    
+	    
 	</div>
 {% endif %}
 
