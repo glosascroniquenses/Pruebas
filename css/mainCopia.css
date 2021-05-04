@@ -111,3 +111,51 @@ p {
     background: rgba(0,0,0,0.063);
     min-width: 100px;
 }
+
+#autores {
+  display:block;
+  background: hsla(30,25%,50%,.1);
+  width: 20%;
+  margin-right: 2em;
+  padding: 2em;
+
+  h1,h2 {
+    font-size: 1rem;
+    margin:0;
+    font-weight: normal;
+  }
+
+  h1 {
+      font-size: 1.1rem;
+      border-bottom: 1px solid rgba(black,.2);
+  }
+  a {
+    display:block;
+    font-size: .825rem;
+  }
+}
+
+#global {
+  background-color: #800;
+  padding: 0 2em;
+  display: flex;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  a,a:link {
+    background: rgba(white,0.675);
+    color: black;
+    text-decoration:none;
+    margin-right: 5px;
+    padding: .25em .625em;
+    border-radius: 5px 5px 0 0;
+  }
+
+  a:hover,
+  a:focus {
+    background: rgba(white,0.75);
+  }
+  a:active,
+  a.current {
+    backgroujnd: rgba(white,1);
+  }
+}
+
