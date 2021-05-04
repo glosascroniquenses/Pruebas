@@ -77,4 +77,37 @@ p {
   'Este es el formato de la lista de palabras: ancho de lista, tamaño de letra
   }
 }
-'listo
+
+#tables2 {
+  width: 66%;
+}
+
+#tables2 section {
+  display:none;
+}
+
+#tables2 section:target {
+  display:block;
+}
+
+#tables2 table {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: .825rem;
+}
+
+#tables2 td {
+    padding: 5px 10px;
+}
+
+#tables2 thead th {
+    background: #585858;
+    color: white;
+    padding: 5px 10px;
+    line-height: 1.25;   
+}
+
+#tables2 tbody td {
+    background: #efefef;
+    background: rgba(0,0,0,0.063);
+    min-width: 100px;
+}
