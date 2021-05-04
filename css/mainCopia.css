@@ -71,11 +71,11 @@ p {
 
 #palabras-nav {
    width: 20%;
-  font-size: .825rem;
+  font-size: 1.25rem;
   a,:link {
     display:block;
     text-decoration:none;
-    color: #800;
+    color: #450;
   }
 }
 'listo
