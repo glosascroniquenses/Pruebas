@@ -31,14 +31,14 @@ layout: default
 	    {{ row.Palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
       {% assign unique_word_array = unique_word_string | split: ","%}
 	    
-      <nav class="local" id="palabras2-nav">
+      <nav class="local" id="palabras-nav">
       {% for word in unique_word_array %}
       <a href="#{{ word | downcase }}">{{ word }}</a>
       {% endfor %}
       </nav>
       'Aquí se extraen las palabras del archivo csv de la carpeta Data. Se genera el link que lleva al detalle de la glosa por palabra. Las palabras son de color blanco.'
 	 
-	    <div id="tables2">
+	    <div id="tables">
       {% for word in unique_word_array %}
 	<section id="{{ word | downcase }}">
         <h2>{{ word }}</h2>
