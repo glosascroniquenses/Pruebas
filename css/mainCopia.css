@@ -75,7 +75,8 @@ p {
   a,:link {
     display:block;
     text-decoration:none;
-    color: #450;
+    color: #333;
+  'Este es el formato de la lista de palabras
   }
 }
 'listo
