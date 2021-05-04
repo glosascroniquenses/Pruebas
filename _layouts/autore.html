@@ -26,7 +26,9 @@ layout: default
     <div id="palabras">
 	    
       {% assign rows = site.data[page.data] %}
-      {% capture unique_word_string %}{% for row in rows %}{% capture current_word %}{{ row.Palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}{{ row.Palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
+      {% capture unique_word_string %}{% for row in rows %}{% capture current_word %}
+	    {{ row.Palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}
+	    {{ row.Palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
       {% assign unique_word_array = unique_word_string | split: ","%}
       <nav class="local" id="palabras-nav">
       {% for word in unique_word_array %}
@@ -34,10 +36,8 @@ layout: default
       {% endfor %}
       </nav>
       'Aquí se extraen las palabras del archivo csv de la carpeta Data. Se genera el link que lleva al detalle de la glosa por palabra. Las palabras son de color blanco.'
-	    
-     
-	    
-   </div>
+	 
+	</div>
 {% endif %}
 
 	
