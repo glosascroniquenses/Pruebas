@@ -1,0 +1,73 @@
+---
+layout: default
+---
+<article>
+  
+    <header>
+    <h2><a href="{{ autore.url }}" style="color:#750C41;">{{ page.title }}</a></h2>
+    </header>
+    <br/>
+    Título de cronista
+    <br/>
+  
+    <p>{{ content }}</p>
+    <br/>
+    Ficha bibliográfica
+    <br/>
+	
+    <p><a href="Pruebas/intro/{{ page.data }}"  style="color: #333;" >Presentación de {{ page.title }}</a></p>
+    <br/>
+    Link con la presentación
+    <br/>
+
+	
+	
+  {% if page.data %}
+    <div id="palabras2">
+	    
+      {% assign rows = site.data[page.data] %}
+      {% capture unique_word_string %}{% for row in rows %}{% capture current_word %}
+	    {{ row.Palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}
+	    {{ row.Palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
+      {% assign unique_word_array = unique_word_string | split: ","%}
+	    
+      <nav class="local" id="palabras-nav">
+      {% for word in unique_word_array %}
+      <a href="#{{ word | downcase }}">{{ word }}</a>
+      {% endfor %}
+      </nav>
+      'Aquí se extraen las palabras del archivo csv de la carpeta Data. Se genera el link que lleva al detalle de la glosa por palabra. Las palabras son de color blanco.'
+	 
+	    <div id="tables">
+      {% for word in unique_word_array %}
+	<section id="{{ word | downcase }}">
+        <h2>{{ word }}</h2>
+    	<table>
+          <thead>
+            <tr>
+              <th>Texto pag No</th>
+	      <th>Cita</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for row in rows %}
+          {% if row.Palabra == word %}
+            <tr>
+              <td>{{ row.pagina }}</td>
+              <td>{{ row.cita }}</td>
+            </tr>
+          {% endif %}
+          {% endfor %}
+      </tbody>
+    </table>
+    </section>
+    {% endfor %}
+     
+	   </div>
+	    
+	    
+	</div>
+{% endif %}
+
+	
+</article>
