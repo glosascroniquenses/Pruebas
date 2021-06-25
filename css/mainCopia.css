@@ -61,21 +61,18 @@ p {
     width: 80%;
 }
 
-#palabras {
+#palabras2 {
   display:flex;
-
-  h3 {
-    font-size:1.25rem;
+  font-size:1.25rem;
   }
-}
 
-#palabras-nav {
+#palabras2-nav {
    width: 40%;
-  font-size: 1.25rem;
-  a,:link {
-    display:block;
+   font-size: 1.25rem;
+   a,:link {
+   display:block;
   'Este es el formato de la lista de palabras: ancho de lista, tamaño de letra
-  }
+   }
 }
 
 #tables {
