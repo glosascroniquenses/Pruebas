@@ -19,12 +19,10 @@ layout: default
       {% assign unique_word_array = unique_word_string % | split: ","%}
 	    
       <nav>
-{% for row in rows %}
-{% if row.Palabra == word %}
-      {{ word }}
-      </br>
-{% endif %}
-{% endfor %}
+	{% for word in unique_word_array %}
+	<a href="#{{ word }}">{{ word }}</a>
+	</br>
+        {% endfor %}
       </nav>
 	
 </div>
