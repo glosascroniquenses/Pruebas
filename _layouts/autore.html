@@ -15,14 +15,11 @@ layout: default
 	    
       
       {% for word in unique_word_array %}
-      {{ word | downcase }}
+      {{ word | uppercase }}
 	    </br>
 	 {% endfor %}
 	    
-	{% for word in unique_word_array %}   
-	    {{ word }}
-	</br>
-	    {% endfor %}
+
 	      
       
       
