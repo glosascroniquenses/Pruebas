@@ -2,9 +2,17 @@
 layout: default
 ---
 <article>
+
+<header>
+    <h1><a href="{{ autore.url }}" style="color:#750C41;">{{ page.title }}</a></h1>
+    </header>
+    <p>{{ content }}</p>
+    <p><a href="https://glosascroniquenses.github.io/Glosario/intro/{{ page.data }}"  style="color: #333;" >Presentación de {{ page.title }}</a></p>
+
   	
 {% if page.data %}
-<div id="palabras2">
+	
+<div id="palabras">
 	    
       {% assign rows = site.data[page.data] %}
       {% capture unique_word_string %}
@@ -33,7 +41,27 @@ layout: default
       {% for word in unique_word_array %}
 	<section id="{{ word }}">		
         <h2>{{ word }}</h2>
-	/section>
+		
+<table>
+          <thead>
+            <tr>
+              <th>Cita</th>
+	      <th>Número de página</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for row in rows %}
+          {% if row.Palabra == word %}
+            <tr>
+              <td>{{ row.cita }}</td>
+	      <td valign="center">{{ row.pagina }}</td>		    
+            </tr>
+          {% endif %}
+          {% endfor %}
+      </tbody>
+    </table>
+		
+	</section>
       {% endfor %}
 </div>
 
