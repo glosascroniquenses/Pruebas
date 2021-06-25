@@ -25,7 +25,8 @@ layout: default
       {% assign unique_word_array = unique_word_string % | split: ","%}
 	    
       <nav>
-	{% for word in unique_word_array %}
+	thislist = [{% for word in unique_word_array %}]
+	      print(thislist[0])
 	      
 	<a href="/Pruebas/autores/cronista01/#Acollico">{{ word }}</a>
 	</br>
