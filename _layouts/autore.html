@@ -30,13 +30,14 @@ layout: default
 	</br>
         {% endfor %}
       </nav>	
+</div>	
 	
-	
-    {% for word in unique_word_array %}
-	<section id="{{ word }}">		
-        	<h2>{{ word }}</h2>
+<div id="tables">
+      {% for word in unique_word_array %}
+	<section id="{{ word | downcase }}">		
+        <h2>{{ word }}</h2>
+	{% endfor %}	
 	</section>
-    {% endfor %}
 	
 </div>
 
