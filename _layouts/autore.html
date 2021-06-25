@@ -42,29 +42,25 @@ layout: default
 	<section id="{{ word }}">		
         <h2>{{ word }}</h2>
 		</section>
+	{% endfor %}
+	</div>
 		
 <table>
           <thead>
             <tr>
               <th>Cita</th>
-	      <th>Número de página</th>
             </tr>
           </thead>
           <tbody>
           {% for row in rows %}
           {% if row.Palabra == word %}
             <tr>
-              <td>{{ row.cita }}</td>
-	      <td valign="center">{{ row.pagina }}</td>		    
+              <td>{{ row.cita }}</td>	    
             </tr>
           {% endif %}
           {% endfor %}
       </tbody>
     </table>
 		
-	
-      {% endfor %}
-</div>
-
 {% endif %}
 </article>
