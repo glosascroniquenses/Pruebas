@@ -67,12 +67,10 @@ p {
   background-color:lightblue;
   width: 40%;
   border: 5px outset red;
-  text-align: center;
   }
 
 #palabras2-nav {
-   a,:link {
-   color: black;  
+   a,:link { 
    }
 }
 'Este es el formato de la lista de palabras: ancho de lista, tamaño de letra
