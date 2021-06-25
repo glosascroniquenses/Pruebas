@@ -62,18 +62,20 @@ p {
 }
 
 #palabras2 {
-  display:block;
   font-size:1.25rem;
   background-color:lightblue;
-  width: 40%;
-  border: 5px outset red;
+  border: 5px outset red;  
+  right: 0;
+  width: 30%;
+  position: absolute;
   }
+'Este es el formato de la lista de palabras: ancho de lista, tamaño de letra
 
 #palabras2-nav {
    a,:link { 
    }
 }
-'Este es el formato de la lista de palabras: ancho de lista, tamaño de letra
+
 
 #tables {
   width: 66%;
