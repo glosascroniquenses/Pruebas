@@ -72,6 +72,9 @@ p {
    font-size: 1.25rem;
    a,:link {
    display:block;
+   border: 5px outset red;
+   background-color: lightblue;
+   text-align: center;
   'Este es el formato de la lista de palabras: ancho de lista, tamaño de letra
    }
 }
