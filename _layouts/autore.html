@@ -11,7 +11,12 @@ layout: default
 	    {{ row.Palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}
 	    {{ row.Palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
       {% assign unique_word_array = unique_word_string | split: ","%}
-	{{ word }}
+	
+	    {% for word in word}
+     		{{ word }}
+	      </br>
+      		{% endfor %}
+	
 	    </br>    
      </div>
 	
