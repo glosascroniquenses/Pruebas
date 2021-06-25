@@ -62,9 +62,12 @@ p {
 }
 
 #palabras2 {
-  display:flex;
+  display:block;
   font-size:1.25rem;
   background-color:lightblue;
+  width: 40%;
+  border: 5px outset red;
+  text-align: center;
   }
 
 #palabras2-nav {
