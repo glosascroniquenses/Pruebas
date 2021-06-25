@@ -51,14 +51,12 @@ p {
 }
 
 #main {
-  padding: 2em;
-  display:flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
+  position: absolute;
+  border: 3px black;
+  width: 90%;
 }
-
 .content {
-    width: 80%;
+    width: 90%;
 }
 
 #palabras {
