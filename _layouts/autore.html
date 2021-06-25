@@ -20,8 +20,10 @@ layout: default
 	    
       <nav>
 {% for row in rows %}
+{% if row.Palabra == word %}
       {{ word }}
       </br>
+{% endif %}
 {% endfor %}
       </nav>
 	
