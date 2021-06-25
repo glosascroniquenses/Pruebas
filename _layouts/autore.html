@@ -15,10 +15,14 @@ layout: default
 	    
       
       {% for word in unique_word_array %}
-      href="#{{ word | downcase }}"
+      {{ word | downcase }}
+	 {% endfor %}
+	    
+	{% for word in unique_word_array %}   
 	    {{ word }}
-	      </br>
-      {% endfor %}
+	    {% endfor %}
+	      <
+      
       
      </div>
 	
