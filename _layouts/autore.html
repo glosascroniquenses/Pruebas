@@ -27,7 +27,15 @@ layout: default
       </nav>
 	
 </div>
-{% endif %}
 
-	
+
+<div id="tables">
+      {% for word in unique_word_array %}
+	<section id="{{ word }}">		
+        <h2>{{ word }}</h2>
+	/section>
+      {% endfor %}
+</div>
+
+{% endif %}
 </article>
