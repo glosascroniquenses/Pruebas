@@ -14,7 +14,7 @@ layout: default
 	    
       <nav class="local" id="palabras-nav">
       {% for word in unique_word_array %}
-      <a href="#{{ word | downcase }}">{{ word }}</a>
+      <a href="#{{ word}}">{{ word }}</a>
       </br>
       {% endfor %}
 	    </nav>
