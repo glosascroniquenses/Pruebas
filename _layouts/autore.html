@@ -5,21 +5,19 @@ layout: default
 
 <header>
     <h2><a href="{{ autore.url }}" style="color:#750C41;">{{ page.title }}</a></h2>
-    </header>
+</header>
+    
     <p>{{ content }}</p>
     <p><a href="https://glosascroniquenses.github.io/Glosario/intro/{{ page.data }}"  style="color: #333;" >Presentación de {{ page.title }}</a></p>
 
-  	
 {% if page.data %}
 	
 <div id="palabras">
-	    
       {% assign rows = site.data[page.data] %}
       {% capture unique_word_string %}
 	    {% for row in rows %}
 	    	{% capture current_word %}{{ row.Palabra }}{% endcapture %}
-	    		{% if current_word == saved_word %}{% else %}{{ row.Palabra }},
-	    		{% endif %}
+	    		{% if current_word == saved_word %}{% else %}{{ row.Palabra }},{% endif %}
 	    	{% capture saved_word %}{{ current_word }}{% endcapture %}
 	    {% endfor %}
       {% endcapture %}
@@ -32,8 +30,7 @@ layout: default
 	<a href="/Pruebas/autores/cronista01/#Acollico">{{ word }}</a>
 	</br>
         {% endfor %}
-      </nav>
-	
+      </nav>	
 </div>
 
 
@@ -62,5 +59,6 @@ layout: default
       </tbody>
     </table>
 </div>		
+
 {% endif %}
 </article>
