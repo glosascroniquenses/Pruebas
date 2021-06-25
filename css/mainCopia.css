@@ -29,14 +29,12 @@ a {
 }
 a:hover {
     text-decoration: underline;
-    'Este es el formato de las pestañas'
 }
 
 
 h2 {
     font-size: 30px;
     font-family:'Trebuchet MS', 'Helvetica', 'Sans-Serif';
-'h2=h1 en el original. Se utiliza para los nombres de los cronistas en la página donde se listan a los cronistas'
 }
 
 
@@ -47,7 +45,6 @@ p {
     line-height: 1.4em;
     color: #333;
     text-align: justify;
-'Este es el formato para la bibliografía del texto en la página donde se listan a los cronistas'
 }
 
 #main {
@@ -67,10 +64,10 @@ p {
   width: 30%;
   position: absolute;
   }
-'Este es el formato de la lista de palabras: ancho de lista, tamaño de letra
 
 #palabras-nav {
    a,:link { 
+       color: #800;
    }
 }
 
@@ -107,52 +104,22 @@ p {
     background: #efefef;
     background: rgba(0,0,0,0.063);
     min-width: 100px;
+    border: 1px solid black;
 }
 
 #autores {
-  display:block;
-  background: hsla(30,25%,50%,.1);
+  right: 0;
   width: 20%;
+  position: absolute;
+  background: hsla(30,25%,50%,.1);
   margin-right: 2em;
   padding: 2em;
+  font-family:'Trebuchet MS', 'Helvetica', 'Sans-Serif';
+  font-size: 1.0rem;
 
-  h1,h2 {
-    font-size: 1rem;
-    margin:0;
-    font-weight: normal;
-  }
-
-  h1 {
-      font-size: 1.1rem;
-      border-bottom: 1px solid rgba(black,.2);
-  }
   a {
-    display:block;
-    font-size: .825rem;
   }
 }
 
-#global {
-  background-color: #800;
-  padding: 0 2em;
-  display: flex;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  a,a:link {
-    background: rgba(white,0.675);
-    color: black;
-    text-decoration:none;
-    margin-right: 5px;
-    padding: .25em .625em;
-    border-radius: 5px 5px 0 0;
-  }
 
-  a:hover,
-  a:focus {
-    background: rgba(white,0.75);
-  }
-  a:active,
-  a.current {
-    backgroujnd: rgba(white,1);
-  }
-}
 
