@@ -4,15 +4,8 @@ layout: default
 <article>
   	
 {% if page.data %}
-	<style>
-	.myDiv {
-		border: 5px outset red;
-		background-color:lightblue;
-		text-align:center;
-		}
-	</style>
-	  
-      <div class="myDiv">
+    <div id="palabras2">
+
 	      
       {% assign rows = site.data[page.data] %}
       {% capture unique_word_string %}{% for row in rows %}{% capture current_word %}
