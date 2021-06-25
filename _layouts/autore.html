@@ -12,12 +12,13 @@ layout: default
 	    {{ row.Palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
       {% assign unique_word_array = unique_word_string | split: ","%}
 	
-	    {% for word in word %}
-     		{{ word }}
-	      </br>
-      		{% endfor %}
+
+      {% for word in unique_word_array %}
+      {{ word }}
+      </br>
+      {% endfor %}
 	
-	    </br>    
+	        
      </div>
 	
 {% endif %}
