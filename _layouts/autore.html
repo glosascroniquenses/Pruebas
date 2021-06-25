@@ -5,8 +5,7 @@ layout: default
   	
 {% if page.data %}
     <div id="palabras2">
-
-	      
+      
       {% assign rows = site.data[page.data] %}
       {% capture unique_word_string %}{% for row in rows %}{% capture current_word %}
 	    {{ row.Palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}
@@ -15,13 +14,9 @@ layout: default
 	    
       
       {% for word in unique_word_array %}
-      {{ word | uppercase }}
+      {{ word | downcase }}
 	    </br>
 	 {% endfor %}
-	    
-
-	      
-      
       
      </div>
 	
