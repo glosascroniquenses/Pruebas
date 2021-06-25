@@ -7,12 +7,14 @@ layout: default
     <div id="palabras2">
       
 
-	
+          {% for row in rows %}
+          {% if row.Palabra == word %}
+            <tr>
+		    <td>{{ row.pagina }}</td>
+            </tr>
+          {% endif %}
+          {% endfor %}
 
-      {% for word in unique_word_array %}
-      {{ word }}
-      </br>
-      {% endfor %}
 	
 	        
      </div>
