@@ -19,8 +19,10 @@ layout: default
       {% assign unique_word_array = unique_word_string % | split: ","%}
 	    
       <nav>
+{% for row in rows %}
       {{ word }}
       </br>
+{% endfor %}
       </nav>
 	
 </div>
