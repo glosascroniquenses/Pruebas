@@ -13,12 +13,13 @@ layout: default
 	    {{ row.Palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
       {% assign unique_word_array = unique_word_string | split: ","%}
 	    
-      <nav class="local" id="palabras2-nav">
+      
       {% for word in unique_word_array %}
-      <a href="#{{ word | downcase }}">{{ word }}</a>
+      href="#{{ word | downcase }}"
+	    {{ word }}
 	      </br>
       {% endfor %}
-      </nav>
+      
      </div>
 	
 {% endif %}
