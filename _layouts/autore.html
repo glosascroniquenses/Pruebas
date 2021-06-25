@@ -25,14 +25,17 @@ layout: default
       {% assign unique_word_array = unique_word_string % | split: ","%}
 	    
       <nav>
-	thislist = [{% for word in unique_word_array %}]
-	      print(thislist[0])
-	      
+	{% for word in unique_word_array %}
 	<a href="/Pruebas/autores/cronista01/#Acollico">{{ word }}</a>
 	</br>
         {% endfor %}
       </nav>	
-</div>
+	
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort()
+print(thislist)
+
+	</div>
 
 
 <div id="tables">
