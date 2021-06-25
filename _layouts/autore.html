@@ -37,9 +37,6 @@ layout: default
       {% for word in unique_word_array %}
 	<section id="{{ word }}">		
         <h2>{{ word }}</h2>
-		</section>
-	{% endfor %}
-	
 		
 <table>
           <thead>
@@ -57,6 +54,9 @@ layout: default
           {% endfor %}
       </tbody>
     </table>
+		</section>
+	{% endfor %}
+	
 </div>		
 
 {% endif %}
