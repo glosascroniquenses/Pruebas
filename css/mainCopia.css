@@ -64,6 +64,7 @@ p {
 #palabras2 {
   display:flex;
   font-size:1.25rem;
+  background-color:lightblue;
   }
 
 #palabras2-nav {
