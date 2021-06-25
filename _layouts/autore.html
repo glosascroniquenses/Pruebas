@@ -16,7 +16,7 @@ layout: default
 	    {% endfor %}
       {% endcapture %}
 	    
-      {% assign unique_word_array = unique_word_string %}
+      {% assign unique_word_array = unique_word_string % | split: ","}
 	    
       <nav>
       {% for word in unique_word_array %}
