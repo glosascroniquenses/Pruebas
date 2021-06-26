@@ -103,12 +103,10 @@ p {
 
 #autores2 {
   right: 0;
-  width: 20%;
+  width: 10%;
   position: absolute;
   background: lightblue;
   border: 5px outset red;  
-  margin-right: 2em;
-  padding: 2em;
   font-family:'Trebuchet MS', 'Helvetica', 'Sans-Serif';
   font-size: 1.5rem;
 
