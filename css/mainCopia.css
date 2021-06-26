@@ -57,6 +57,13 @@ p {
 }
 
 #palabras {
+  right: 0;
+  width: 10%;
+  position: absolute;
+  background: lightblue;
+  border: 5px outset red;  
+  font-family:'Trebuchet MS', 'Helvetica', 'Sans-Serif';
+  font-size: 1.5rem;
   }
 
 #palabras-nav {
@@ -104,7 +111,7 @@ p {
 #autores2 {
   right: 0;
   width: 10%;
-
+  position: absolute;
   background: lightblue;
   border: 5px outset red;  
   font-family:'Trebuchet MS', 'Helvetica', 'Sans-Serif';
