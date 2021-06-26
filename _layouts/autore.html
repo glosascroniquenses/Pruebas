@@ -13,9 +13,7 @@ layout: default
       {% assign rows = site.data[page.data] %}
       {% capture unique_word_string %}
 	    {% for row in rows %}
-	    	{% capture current_word %}{{ row.Palabra }}{% endcapture %}
-	    		{% if current_word == saved_word %}{% else %}{{ row.Palabra }},{% endif %}
-	    	{% capture saved_word %}{{ current_word }}{% endcapture %}
+	    	{% capture current_word %}{{ row.Palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}{{ row.Palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}
 	    {% endfor %}
       {% endcapture %}
 	    
