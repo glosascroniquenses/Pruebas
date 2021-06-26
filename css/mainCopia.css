@@ -57,12 +57,6 @@ p {
 }
 
 #palabras {
-  font-size:1.25rem;
-  background-color:lightblue;
-  border: 5px outset red;  
-  right: 0;
-  width: 30%;
-  position: absolute;
   }
 
 #palabras-nav {
@@ -109,7 +103,7 @@ p {
 
 #autores2 {
   right: 0;
-  width: 30%;
+  width: 20%;
   position: absolute;
     background: lightblue;
     border: 5px outset red;  
