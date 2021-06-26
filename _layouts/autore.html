@@ -7,9 +7,6 @@ layout: default
     <h2><a href="{{ autore.url }}" style="color:#750C41;">{{ page.title }}</a></h2>
 </header>
     
-    <p>{{ content }}</p>
-    <p><a href="https://glosascroniquenses.github.io/Glosario/intro/{{ page.data }}"  style="color: #333;" >Presentación de {{ page.title }}</a></p>
-
 {% if page.data %}
 	
 <div id="palabras">
@@ -26,40 +23,12 @@ layout: default
 	    
       <nav>
 	{% for word in unique_word_array %}
-	<a href="#{{ word | downcase }}">{{ word }}</a>
-	</br>
+        	{{ word }}
+		</br>
         {% endfor %}
       </nav>	
 </div>	
 	
-<div id="tables">
-      {% for word in unique_word_array %}
-	<section id="#{{ word | downcase }}">		
-        <h2>{{ word }}</h2>
-		
-	<table>
-          <thead>
-            <tr>
-              <th>Cita</th>
-            </tr>
-          </thead>
-          <tbody>
-          {% for row in rows %}
-          {% if row.Palabra == word %}
-            <tr>
-              <td>{{ row.cita }}</td>	    
-            </tr>
-          {% endif %}
-          {% endfor %}
-          </tbody>
-        </table>
-        </section>
-       {% endfor %}
-</div>
-
-
-
-	
-
 {% endif %}
+
 </article>
