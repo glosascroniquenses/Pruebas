@@ -109,13 +109,15 @@ p {
 
 #autores {
   right: 0;
-  width: 20%;
+  width: 30%;
   position: absolute;
-  background: hsla(30,25%,50%,.1);
+    background: lightblue;
+    border: 5px outset red;  
   margin-right: 2em;
   padding: 2em;
   font-family:'Trebuchet MS', 'Helvetica', 'Sans-Serif';
   font-size: 1.0rem;
+
 
   a {
   }
