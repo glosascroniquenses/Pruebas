@@ -56,7 +56,7 @@ p {
     width: 90%;
 }
 
-#palabras2 {
+#palabras {
   font-size:1.25rem;
   background-color:lightblue;
   border: 5px outset red;  
@@ -65,7 +65,7 @@ p {
   position: absolute;
   }
 
-#palabras2-nav {
+#palabras-nav {
    a,:link { 
        color: #800;
    }
