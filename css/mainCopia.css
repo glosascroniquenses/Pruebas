@@ -104,7 +104,7 @@ p {
 #autores2 {
   right: 0;
   width: 10%;
-  position: absolute;
+
   background: lightblue;
   border: 5px outset red;  
   font-family:'Trebuchet MS', 'Helvetica', 'Sans-Serif';
