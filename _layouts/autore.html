@@ -26,7 +26,7 @@ layout: default
 	    
       <nav>
 	{% for word in unique_word_array %}
-	<a href="/Pruebas/autores/cronista01/#Acollico">{{ word }}</a>
+	<a href="#{{ word | downcase }}">{{ word }}</a>
 	</br>
         {% endfor %}
       </nav>	
@@ -34,13 +34,27 @@ layout: default
 	
 <div id="tables">
       {% for word in unique_word_array %}
-	
-        <section id="https://glosascroniquenses.github.io/Pruebas/autores/cronista01/#Acollico">		
+	<section id="/Pruebas/autores/cronista01/#Acollico">		
         <h2>{{ word }}</h2>
-	</section>
-      {% endfor %}	
-	
-	
+		
+	<table>
+          <thead>
+            <tr>
+              <th>Cita</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for row in rows %}
+          {% if row.Palabra == word %}
+            <tr>
+              <td>{{ row.cita }}</td>	    
+            </tr>
+          {% endif %}
+          {% endfor %}
+          </tbody>
+        </table>
+        </section>
+       {% endfor %}
 </div>
 
 
