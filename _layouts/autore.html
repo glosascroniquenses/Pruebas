@@ -27,7 +27,29 @@ layout: default
 		</br>
         {% endfor %}
       </nav>	
-</div>	
+</div>
+
+<div id="tables">
+    {% for word in unique_word_array %}
+    <table>
+          <thead>
+            <tr>
+              <th>Cita</th>
+            </tr>
+          </thead>
+      <tbody>
+          {% for row in rows %}
+          {% if row.Palabra == word %}
+            <tr>
+              <td>{{ row.cita }}</td>	    
+            </tr>
+          {% endif %}
+          {% endfor %}
+      </tbody>
+    </table>
+    {% endfor %}
+    
+</div>
 	
 {% endif %}
 
