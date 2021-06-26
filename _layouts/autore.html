@@ -25,6 +25,9 @@ layout: default
 
 <div id="tables">
     {% for word in unique_word_array %}
+	<section id="{{ word | downcase }}">		
+        <h2>{{ word }}</h2>
+	
     <table>
           <thead>
             <tr>
@@ -41,6 +44,7 @@ layout: default
           {% endfor %}
       </tbody>
     </table>
+   </section>
     {% endfor %}
     
 </div>
