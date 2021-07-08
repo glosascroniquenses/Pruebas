@@ -40,7 +40,7 @@ layout: default
               <td>{{ word }}</td>
 	
 
-{% for row in rows %}
+
           {% if row.Palabra == word %}
 	
 {% assign rows = site.data[page.data] %}
@@ -51,7 +51,7 @@ layout: default
     		
 
           {% endif %}
- {% endfor %}
+
 		    
             </tr>
     
