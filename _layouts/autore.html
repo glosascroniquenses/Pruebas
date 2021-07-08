@@ -25,9 +25,10 @@ layout: default
 
 <div id="tables">
     {% for word in unique_word_array %}
-	<section id="{{ word | downcase }}">		
+		
         <h2>{{ word }}</h2>
-
+</div>
+	
 <div id="palabras2">
       {% assign rows = site.data[page.data] %}
 	
@@ -44,15 +45,15 @@ layout: default
 
 <div id="tables">
     {% for word in unique_word_array %}
-	<section id="{{ word | downcase }}">		
+	
         <h2>{{ word }}</h2>	
 		
 		
 		
-</section>
+
     {% endfor %}
     
-</div>
+
 	
     {% endif %}
 
