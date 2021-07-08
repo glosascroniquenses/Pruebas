@@ -28,55 +28,11 @@ layout: default
 	<section id="{{ word | downcase }}">		
         <h2>{{ word }}</h2>
 		
-
-		
-<table>
-          <thead>
-            <tr>
-              <th>Palabra</th> 
-		    <th>Ejemplo</th>
-            </tr>
-          </thead>
-      <tbody>
-	      
-            <tr>
-              <td>{{ word }}</td>
-		    
-{% capture unique_word_string %}{% for row in rows %}{% capture current_word %}{{ row.id_palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}{{ row.id_palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
-{% for word in unique_word_array %}	    
-		    {% for row in rows %}
-		    <td>{{ row.id_palabra }}</td>
-		    {% endfor %}
-		    {% endfor %}
-            </tr>
-	      
-         
-      
-      </tbody>
-    </table>
-		
-	
-    <table>
-          <thead>
-            <tr>
-              <th>Cita</th>
-            </tr>
-          </thead>
-      <tbody>
-          {% for row in rows %}
-          {% if row.Palabra == word %}
-            <tr>
-              <td>{{ row.cita }}</td>	    
-            </tr>
-          {% endif %}
-          {% endfor %}
-      </tbody>
-    </table>
-   </section>
-    {% endfor %}
+{% endfor %}
     
 </div>
 	
-{% endif %}
+    {% endif %}
 
+	
 </article>
