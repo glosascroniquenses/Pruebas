@@ -29,49 +29,36 @@ layout: default
       {% for word in unique_word_array %}
 	<section id="{{ word | downcase }}">		
         <h2>{{ word }}</h2>
+	
+		
 
+		
+	<table>
+          <thead>
+            <tr>
+              <th>Cita</th>
+	      <th>Número de página</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for row in rows %}
+          {% if row.Palabra == word %}
+            <tr>
+              <td>{{ row.cita }}</td>
+	      <td valign="center">{{ row.pagina }}</td>		    
+            </tr>
+          {% endif %}
+          {% endfor %}
+      </tbody>
+    </table>
+   
 		
     </section>
     {% endfor %}
     
 </div>
 	
-<div id="palabras">
-	    
-      {% assign rows = site.data[page.data] %}
-
-      {% capture unique_word_string %}{% for row in rows %}{% capture current_word %}{{ row.id_palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}{{ row.id_palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
-
-      {% assign unique_word_array = unique_word_string | split: ","%}
-    
-</div>
-	    
-<div id="tables">
-      {% for word in unique_word_array %}
-	<section id="{{ word | downcase }}">		
-        <h2>{{ word }}</h2>
-
-		<table>
-          <thead>
-            <tr>
-              <th>Ejemplo</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{{ word }}</td>	    
-            </tr>
-     
-      </tbody>
-    </table>
-		
-		
-    </section>
-    {% endfor %}
-    
-</div>
-
-
     {% endif %}
 
+	
 </article>
