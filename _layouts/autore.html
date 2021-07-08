@@ -40,9 +40,9 @@ layout: default
               <td>{{ word }}</td>
 
 
-		    
+	{% if row.Palabra == word %}	    
               <td>{{ row.id_palabra }}</td>	    
-    		
+    	 {% endif %}	
 
 		    
             </tr>
