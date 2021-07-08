@@ -47,7 +47,7 @@ layout: default
 {% capture unique_word_string %}{% for row in rows %}{% capture current_word %}{{ row.id_palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}{{ row.id_palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
 {% assign unique_word_array = unique_word_string % | split: ","%}
 		    
-              <td>{{ word }}</td>	    
+              <td>{{ row.id_palabra }}</td>	    
     		
 
           {% endif %}
