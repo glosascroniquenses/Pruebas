@@ -39,17 +39,17 @@ layout: default
             <tr>
               <td>{{ word }}</td>
 	
-{% for word in unique_word_array %}
+
           {% for row in rows %}
           {% if row.Palabra == word %}
-		   	 
+{% for word in unique_word_array %}		   	 
      
            
               <td>{{ row.id_palabra }}</td>	    
-         		
+ {% endfor %}        		
           {% endif %}
           {% endfor %}
-{% endfor %}
+
 		    
             </tr>
     
