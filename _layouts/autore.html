@@ -41,8 +41,12 @@ layout: default
 	      
             <tr>
               <td>{{ word }}</td>
+		    
+{% capture unique_word_string %}{% for row in rows %}{% capture current_word %}{{ row.id_palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}{{ row.id_palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
+{% for word in unique_word_array %}	    
 		    {% for row in rows %}
 		    <td>{{ row.id_palabra }}</td>
+		    {% endfor %}
 		    {% endfor %}
             </tr>
 	      
