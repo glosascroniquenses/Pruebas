@@ -47,16 +47,12 @@ layout: default
    </section>
     {% endfor %}
     
-</div>
 	
 {% endif %}
 
 
-
-
 {% if page.data %}
 	
-<div id="palabras2">
       {% assign rows = site.data[page.data] %}
 	
       {% capture unique_word_string %}{% for row in rows %}{% capture current_word %}{{ row.Palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}{{ row.Palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
@@ -68,12 +64,7 @@ layout: default
 		</br>
         {% endfor %}
       </nav>	
-</div>
 
-<div id="tables">
-    {% for word in unique_word_array %}
-	<section id="{{ word | downcase }}">		
-        <h2>{{ word }}</h2>
 	
     <table>
           <thead>
@@ -93,9 +84,10 @@ layout: default
     </table>
    </section>
     {% endfor %}
-    
+
+{% endif %}
 </div>
 	
-{% endif %}
+
 
 </article>
