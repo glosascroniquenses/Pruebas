@@ -41,10 +41,11 @@ layout: default
 		    
           {% for row in rows %}
           {% if row.Palabra == word %}
+		   	 {% for row in unique_row_array %}
      
            
               <td>{{ row.id_palabra }}</td>	    
-        
+         		{% endfor %}
           {% endif %}
           {% endfor %}
 	      
