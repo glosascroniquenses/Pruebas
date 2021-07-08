@@ -37,7 +37,17 @@ layout: default
       <tbody>
 
             <tr>
-              <td>{{ word }}</td>	    
+              <td>{{ word }}</td>
+		    
+          {% for row in rows %}
+          {% if row.Palabra == word %}
+     
+           
+              <td>{{ row.id_palabra }}</td>	    
+        
+          {% endif %}
+          {% endfor %}
+	      
             </tr>
     
       </tbody>
