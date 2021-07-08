@@ -27,6 +27,24 @@ layout: default
     {% for word in unique_word_array %}
 	<section id="{{ word | downcase }}">		
         <h2>{{ word }}</h2>
+		
+ <table>
+          <thead>
+            <tr>
+              <th>Palabra</th>
+            </tr>
+          </thead>
+      <tbody>
+          {% for word in unique_word_array %}
+            <tr>
+              <td>{{ word }}</td>	    
+            </tr>
+          {% endif %}
+          {% endfor %}
+      </tbody>
+</table>
+		
+		
 	
     <table>
           <thead>
