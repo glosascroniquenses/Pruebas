@@ -38,11 +38,12 @@ layout: default
             </tr>
           </thead>
       <tbody>
-   
+	      {% for row in rows %}
             <tr>
               <td>{{ word }}</td>
 		    <td>{{ row.cita }}</td>
             </tr>
+	      {% endfor %}
          
       
       </tbody>
