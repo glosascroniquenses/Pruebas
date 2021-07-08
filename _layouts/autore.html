@@ -40,11 +40,9 @@ layout: default
               <td>{{ word }}</td>
 	
 
-   {% for row in rows %}
+   {% for row in rows %}{% capture current_word %}{{ row.id_palabra }}{% endcapture %}
           {% if row.Palabra == word %}
-	   	 
-     
-           
+	   
               <td>{{ row.id_palabra }}</td>	    
     		
           {% endif %}
