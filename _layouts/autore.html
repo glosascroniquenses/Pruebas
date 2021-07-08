@@ -39,11 +39,11 @@ layout: default
             <tr>
               <td>{{ word }}</td>
 
-
+    {% for row in rows %}
 	{% if row.Palabra == word %}	    
               <td>{{ row.id_palabra }}</td>	    
     	 {% endif %}	
-
+ {% endfor %}
 		    
             </tr>
     
