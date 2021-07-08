@@ -5,13 +5,13 @@ layout: default
 
 <header>
     <h2><a href="{{ autore.url }}" style="color:#750C41;">{{ page.title }}</a></h2>
-	<h2><a href="{{ autore.url }}" style="color:#750C41;">{{ page.datax }}</a></h2>
+	<h2><a href="{{ autore.url }}" style="color:#750C41;">{{ site.data[page.data] }}</a></h2>
 </header>
     
-{% if page.datax %}
+{% if page.data %}
 	
 <div id="palabras2">
-      {% assign rows = site.dataz[page.datax] %}
+      {% assign rows = site.data[page.data] %}
 	
       {% capture unique_word_string %}{% for row in rows %}{% capture current_word %}{{ row.Palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}{{ row.Palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
 	    
