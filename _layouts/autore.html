@@ -35,7 +35,16 @@ layout: default
 	<tbody>
             <tr>
 		    <td>{{ word }}</td>
+
+      {% assign rows = site.data[page.data] %}
+	
+      {% capture unique_word_string %}{% for row in rows %}{% capture current_word %}{{ row.Palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}{{ row.Palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
+	    
+      {% assign unique_word_array = unique_word_string % | split: ","%}
+	
+{% for word in unique_word_array %}
 		    <td>{{ word }}</td>
+{% endfor %}	
             </tr>
         </tbody>
 </table>
