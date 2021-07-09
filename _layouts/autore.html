@@ -56,9 +56,8 @@ layout: default
 	 
 	<tbody>
             
-{% for row in rows %}
+{% for row in row %}
 {% if row.Palabra == word %}
-		if($row == 1)
 		<tr>
 		    <td>{{ row.id_texto }}</td>
 		</tr>
