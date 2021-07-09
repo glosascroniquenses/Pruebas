@@ -22,6 +22,29 @@ layout: default
 	</br>
         {% endfor %}
 	
+	
+<table>
+ 	<thead>
+            <tr>
+              <th>Ejemplo</th>
+            </tr>
+        </thead>
+	 
+	<tbody>
+            <tr>
+              <td>{{ word }}</td>
+			{% for word in unique_word_array %}
+        		{{ word }}
+			</br>
+	      <td>{{ word }}</td>
+        		{% endfor %}
+            </tr>
+         </tbody>
+</table>
+	
+	
+
+	
 </div>
 
 <div id="palabras2">
