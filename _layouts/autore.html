@@ -40,7 +40,7 @@ layout: default
               <td>{{ word }}</td>
 
     {% for row in rows %}
-	{% if row.Palabra == word %}	    
+	{% if row.id_palabra == word %}	    
               <td>{{ row.id_palabra }}</td>	    
     	 {% endif %}	
  {% endfor %}
@@ -59,7 +59,7 @@ layout: default
           </thead>
       <tbody>
           {% for row in rows %}
-          {% if row.Palabra == word %}
+          {% if row.id_palabra == word %}
             <tr>
               <td>{{ row.cita }}</td>	    
             </tr>
