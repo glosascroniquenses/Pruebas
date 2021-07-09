@@ -55,13 +55,15 @@ layout: default
         </thead>
 	 
 	<tbody>
-            <tr>
+            
 {% for row in rows %}
-{% if row.Palabra == word %}	    
+{% if row.Palabra == word %}
+		<tr>
 		    <td>{{ row.id_texto }}</td>
+		</tr>
 {% endif %}
 {% endfor %}
-            </tr>
+            
         </tbody>
 </table>
 		
