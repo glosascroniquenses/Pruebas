@@ -43,29 +43,42 @@ layout: default
 	 
 	<tbody>
             <tr>
+		    <td>{{ word }}</td>	
+            </tr>
+        </tbody>
+</table>
 
-		    <td>{{ word }}</td>
-	
+<table>
+ 	<thead>
+            <tr>
+	      <th>Ejemplo2</th>
+            </tr>
+        </thead>
+	 
+	<tbody>
+            <tr>
 
       {% assign rows = site.data[page.data] %}
 	
       {% capture unique_word_string %}{% for row in rows %}{% capture current_word %}{{ row.Palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}{{ row.id_texto }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
 	    
       {% assign unique_word_array = unique_word_string % | split: ","%}
-	
-{% for word in unique_word_array %}
-		    {% if row.id_palabra == word %}
+		    
+{% for row in rows %}
+{% if row.id_palabra == word %}	
+{% for word in unique_word_array %}	   
 		    <td>{{ row.id_texto }}</td>
-		    {% endif %}
+{% endfor %}
+{% endif %}
 {% endfor %}	
             </tr>
         </tbody>
 </table>
+		
+		
 </section>
 {% endfor %}
 </div>
-
-	
 
 
 {% endif %}
