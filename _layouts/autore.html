@@ -58,9 +58,12 @@ layout: default
             
 {% for row in rows %}
 {% if row.Palabra == word %}
+		{% assign unique_word_array = unique_word_string % | split: ","%}
+		{% for word in unique_word_array %}
 		<tr>
 		    <td>{{ row.id_texto }}</td>
 		</tr>
+{% endfor %}
 {% endif %}
 {% endfor %}
             
