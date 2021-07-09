@@ -26,11 +26,10 @@ layout: default
 	 
 	<tbody>
             <tr>
-              <td>{{ word }}</td>
-			{% for word in unique_word_array %}
-        		{{ word }}
-			</br>
-	      <td>{{ word }}</td>
+            {% for word in unique_word_array %}
+            {% if row.id_palabra == word %}
+		    <td>{{ word }}</td>
+		        {% endif %}
         		{% endfor %}
             </tr>
          </tbody>
