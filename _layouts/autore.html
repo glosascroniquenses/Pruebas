@@ -17,6 +17,14 @@ layout: default
 	    
       {% assign unique_word_array = unique_word_string % | split: ","%}	
 	
+</div>
+	
+
+<div id="tables">
+    	{% for word in unique_word_array %}
+	<section id="{{ word | downcase }}">		
+        <h2>{{ word }}</h2>
+		
 <table>
  	<thead>
             <tr>
