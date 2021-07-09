@@ -57,18 +57,24 @@ layout: default
 	<tbody>
             <tr>
 
+ 
+{% for row in rows %}
+{% if row.Palabra == word %}
+		    
       {% assign rows = site.data[page.data] %}
 	
       {% capture unique_word_string %}{% for row in rows %}{% capture current_word %}{{ row.Palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}{{ row.Palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
 	    
       {% assign unique_word_array = unique_word_string % | split: ","%}
+		    	    
 		    
-
-{% if row.Palabra == word %}	
-{% for word in unique_word_array %}	   
+{% for word in unique_word_array %}	
+		    
 		    <td>{{ row.id_texto }}</td>
 {% endfor %}
 {% endif %}
+{% endfor %}
+
 	
             </tr>
         </tbody>
