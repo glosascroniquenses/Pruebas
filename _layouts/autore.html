@@ -63,13 +63,13 @@ layout: default
 	    
       {% assign unique_word_array = unique_word_string % | split: ","%}
 		    
-{% for row in rows %}
+
 {% if row.Palabra == word %}	
 {% for word in unique_word_array %}	   
 		    <td>{{ row.id_texto }}</td>
 {% endfor %}
 {% endif %}
-{% endfor %}	
+	
             </tr>
         </tbody>
 </table>
