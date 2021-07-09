@@ -36,14 +36,13 @@ layout: default
 <table>
  	<thead>
             <tr>
-              <th>Ejemplo1</th>
-	      <th>Ejemplo2</th>
+            	<th>Ejemplo1</th>
             </tr>
         </thead>
 	 
 	<tbody>
             <tr>
-		    <td>{{ word }}</td>	
+		<td>{{ word }}</td>	
             </tr>
         </tbody>
 </table>
@@ -60,12 +59,12 @@ layout: default
 
       {% assign rows = site.data[page.data] %}
 	
-      {% capture unique_word_string %}{% for row in rows %}{% capture current_word %}{{ row.Palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}{{ row.id_texto }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
+      {% capture unique_word_string %}{% for row in rows %}{% capture current_word %}{{ row.Palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}{{ row.Palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
 	    
       {% assign unique_word_array = unique_word_string % | split: ","%}
 		    
 {% for row in rows %}
-{% if row.id_palabra == word %}	
+{% if row.Palabra == word %}	
 {% for word in unique_word_array %}	   
 		    <td>{{ row.id_texto }}</td>
 {% endfor %}
