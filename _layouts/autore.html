@@ -17,6 +17,11 @@ layout: default
 	    
       {% assign unique_word_array = unique_word_string % | split: ","%}
 	
+	{% for word in unique_word_array %}
+        {{ word }}
+	</br>
+        {% endfor %}
+	
 </div>
 	
 {% endif %}
