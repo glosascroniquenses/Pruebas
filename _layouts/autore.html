@@ -54,6 +54,29 @@ layout: default
 		
         </tbody>
 </table>
+
+<table>
+ 	<thead>
+            <tr>
+            	<th>Cita</th>
+		<th>pagina</th>
+            </tr>
+        </thead>
+	 
+	<tbody>
+		
+            <tr>
+			{% for row in rows %}
+			{% if row.id_palabra == word %}
+		<td>{{ row.Cita }}</td>   
+		<td>{{ row.pagina }}</td> 
+            </tr>
+			{% endif %}
+			{% endfor %}
+		
+        </tbody>
+</table>
+
 		
 		
 </section>
