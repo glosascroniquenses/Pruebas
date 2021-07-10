@@ -67,7 +67,7 @@ layout: default
 		
             <tr>
 			{% for row in rows %}
-		    	{% if row.id_palabra == current_word %}
+		    	{% if row.id_palabra == saved_word %}
 		<td>{{ row.cita }}</td>   
 		<td>{{ row.pagina }}</td> 
             </tr>
