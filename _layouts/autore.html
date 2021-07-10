@@ -50,13 +50,12 @@ layout: default
 	    
 {% assign unique_word_array = unique_word_string % | split: ","%}
 	{% for word in unique_word_array %}
-        {{ word }}
-        {% endfor %}
-		    
-		<td>{{ word }}</td>	
+        		<td>{{ word }}</td>	
 			{% for row in rows %}
 			{% if row.Palabra == word %}
-		<td>{{ row.id_texto }}</td>   
+		<td>{{ row.id_texto }}</td> 	    
+	{% endfor %}
+		    
             </tr>
 			{% endif %}
 			{% endfor %}
