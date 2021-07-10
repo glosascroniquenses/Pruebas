@@ -28,6 +28,7 @@ layout: default
 	
 
 <div id="tables">
+		
     	{% for word in unique_word_array %}
 	<section id="{{ word | downcase }}">		
         <h2>{{ word }}</h2>
@@ -44,6 +45,14 @@ layout: default
 	<tbody>
 		
             <tr>
+		    
+{% capture unique_word_string %}{% for row in rows %}{% capture current_word %}{{ row.id_palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}{{ row.id_palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
+	    
+{% assign unique_word_array = unique_word_string % | split: ","%}
+	{% for word in unique_word_array %}
+        {{ word }}
+        {% endfor %}
+		    
 		<td>{{ word }}</td>	
 			{% for row in rows %}
 			{% if row.Palabra == word %}
