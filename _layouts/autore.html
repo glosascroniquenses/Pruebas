@@ -38,7 +38,6 @@ layout: default
  	<thead>
             <tr>
             	<th>Ejemplo1</th>
-		<th>Ejemplo2</th>
             </tr>
         </thead>
 	 
@@ -51,14 +50,9 @@ layout: default
 	{% for word in unique_word_array %}
         	<tr>	
 			<td>{{ word }}</td>
-	{% endfor %}
-			{% for row in rows %}
-			{% if row.id_palabra == word %}
-			<td>{{ row.id_texto }}</td> 	    
+	{% endfor %}	    
             	</tr>	
-			{% endif %}
-		
-			{% endfor %}
+
         </tbody>
 </table>
 
