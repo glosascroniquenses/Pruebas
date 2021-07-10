@@ -37,35 +37,21 @@ layout: default
  	<thead>
             <tr>
             	<th>Ejemplo1</th>
+		<th>Ejemplo2</th>
             </tr>
         </thead>
 	 
 	<tbody>
+		
             <tr>
 		<td>{{ word }}</td>	
+			{% for row in rows %}
+			{% if row.Palabra == word %}
+		<td>{{ row.id_texto }}</td>   
             </tr>
-        </tbody>
-</table>
-
-<table>
- 	<thead>
-            <tr>
-	      <th>Ejemplo2</th>
-            </tr>
-        </thead>
-	 
-	<tbody>
-            
-{% for row in rows %}
-{% if row.Palabra == word %}
-		<tr>
-		    <td>{{ row.id_texto }}</td>
-		</tr>
-{% endif %}
-{% endfor %}
-
-
-            
+			{% endif %}
+			{% endfor %}
+		
         </tbody>
 </table>
 		
