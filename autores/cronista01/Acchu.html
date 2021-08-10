@@ -46,6 +46,8 @@ data: palabra01
 
 	
 <div id="tables">
+	{% for word in unique_word_array %}
+	<section id="{{ word }}">	
 	
     <table>
           <thead>
@@ -63,7 +65,8 @@ data: palabra01
           {% endfor %}
       </tbody>
     </table>
-    
+	</section>
+   
 </div>
 	
 {% endif %}
