@@ -65,7 +65,7 @@ data: palabra01
           </thead>
       <tbody>
           {% for row in rows %}
-          {% if row.Palabra == page.title %}
+          {% if row.Palabra == {{ page.title }} %}
             <tr>
               <td>{{ row.Lengua }}</td>	    
             </tr>
