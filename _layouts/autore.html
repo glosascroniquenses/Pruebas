@@ -22,35 +22,5 @@ layout: default
 	
 </div>
 	
-
-<div id="tables">
-			
-        <h2>{{ word }}</h2>
-		
-		
-<table>
- 	<thead>
-            <tr>
-            	<th>Ejemplo1</th>
-            </tr>
-        </thead>
-	 
-
-	<tbody>
-	{% for row in rows %}
-	{% if row.Palabra == word %}
-        	<tr>	
-			<td>{{ word }}</td>
-            	</tr>	
-	{% endif %}
-	{% endfor %}
-        </tbody>
-</table>
-
-
-		
-		
-</section>
-</div>
 {% endif %}
 </article>
