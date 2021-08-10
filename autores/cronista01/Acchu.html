@@ -60,7 +60,7 @@ data: palabra01
             </tr>
           </thead>
       <tbody>
-     
+     {% for row in rows %}
           {% if row.Palabra == "Acchu" %}
             <tr>
               <td>{{ row.Lengua }}</td>
@@ -69,6 +69,7 @@ data: palabra01
 	      <td>{{ row.Notas }}</td>
             </tr>
           {% endif %}
+      {% endfor %}
       
       </tbody>
     </table>
