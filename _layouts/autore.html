@@ -2,21 +2,23 @@
 layout: default
 ---
 <article>
+
+<header>
+    <h2><a href="{{ autore.url }}" style="color:#750C41;">{{ page.title }}</a></h2>
+</header>
     
 {% if page.data %}
 	
 <div id="palabras2">
-	
       {% assign rows = site.data[page.data] %}
 	
       {% capture unique_word_string %}{% for row in rows %}{% capture current_word %}{{ row.Palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}{{ row.Palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
-	 
-      {% assign unique_word_array = unique_word_string % | split: ","%}	
-	
+	    
+      {% assign unique_word_array = unique_word_string % | split: ","%}
       <nav class="local" id="autores2">
 	{% for word in unique_word_array %}
         <a href="#{{ word | downcase }}">{{ word }}</a>
-	</br>
+		</br>
         {% endfor %}
       </nav>	
 </div>
@@ -25,8 +27,28 @@ layout: default
     {% for word in unique_word_array %}
 	<section id="{{ word | downcase }}">		
         <h2>{{ word }}</h2>
+	
+    <table>
+          <thead>
+            <tr>
+              <th>Cita</th>
+            </tr>
+          </thead>
+      <tbody>
+          {% for row in rows %}
+          {% if row.Palabra == word %}
+            <tr>
+              <td>{{ row.cita }}</td>	    
+            </tr>
+          {% endif %}
+          {% endfor %}
+      </tbody>
+    </table>
+   </section>
     {% endfor %}
+    
 </div>
 	
 {% endif %}
+
 </article>
