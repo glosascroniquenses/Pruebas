@@ -54,13 +54,15 @@ data: palabra01
           <thead>
             <tr>
               <th>Lengua</th>
+	      <th>Propuesta de pronunciación</th>
             </tr>
           </thead>
       <tbody>
           {% for row in rows %}
           {% if row.Palabra == word %}
             <tr>
-              <td>{{ row.Lengua }}</td>	    
+              <td>{{ row.Lengua }}</td>
+	      <td>{{ row.Propuesta de pronunciación }}</td>
             </tr>
           {% endif %}
           {% endfor %}
