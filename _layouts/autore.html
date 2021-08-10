@@ -2,10 +2,6 @@
 layout: default
 ---
 <article>
-
-<header>
-    <h2><a href="{{ autore.url }}" style="color:#750C41;">{{ page.title }}</a></h2>
-</header>
     
 {% if page.data %}
 	
@@ -13,7 +9,7 @@ layout: default
 	
       {% assign rows = site.data[page.data] %}
 	
-      {% capture unique_word_string %}{% for row in rows %}{% capture current_word %}{{ row.id_texto }}{% endcapture %}{% if current_word == saved_word %}{% else %}{{ row.Palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
+      {% capture unique_word_string %}{% for row in rows %}{% capture current_word %}{{ row.Palabra }}{% endcapture %}{% if current_word == saved_word %}{% else %}{{ row.Palabra }},{% endif %}{% capture saved_word %}{{ current_word }}{% endcapture %}{% endfor %}{% endcapture %}
 	    
       {% assign unique_word_array = unique_word_string % | split: ","%}	
 	
@@ -42,39 +38,15 @@ layout: default
 	<tbody>
         	<tr>	
 			<td>{{ word }}</td>
-			<td>{{ row.cita }}</td>
             	</tr>	
 
         </tbody>
 </table>
 
-<table>
- 	<thead>
-            <tr>
-            	<th>Cita</th>
-		<th>pagina</th>
-            </tr>
-        </thead>
-	 
-	<tbody>	
-            <tr>		    
-			{% for row in rows %}
-		    	{% if row.Palabra == word %}
-		<td>{{ row.cita }}</td>   
-		<td>{{ row.pagina }}</td> 
-            </tr>
-			{% endif %}
-			{% endfor %}
-        </tbody>
-</table>
 
 		
 		
 </section>
-
 </div>
-
-
 {% endif %}
-
 </article>
