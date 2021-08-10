@@ -12,25 +12,7 @@ data: palabra01
 
 <div id="tables">
 	<h2>{{ page.title }}</h2>
-	
-    <table>
-          <thead>
-            <tr>
-              <th>Lengua</th>
-              <th>Propuesta de pronunciación</th>
-              <th>Bibliografía</th>
-              <th>Notas</th>
-            </tr>
-          </thead>
-      <tbody>
-            <tr>
-              <td>Puquina</td>
-              <td>/ashú/</td>	
-              <td>Diccionario de lengua quechua y aymara</td>	
-              <td>Puede ver más información en el artículo sobre la diferenciación entre las lenguas indígenas del siglo XVI del área sudamericana del Perú.</td>	
-            </tr>
-      </tbody>
-    </table>
+
 </div>
 	
 {% if page.data %}
@@ -43,7 +25,7 @@ data: palabra01
       {% assign unique_word_array = unique_word_string % | split: ","%}
       
 	{% for word in unique_word_array %}
-      
+      <h2>{{ word }}</h2>
         {% endfor %}
      	
 </div>
