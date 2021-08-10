@@ -43,7 +43,7 @@ data: palabra01
       {% assign unique_word_array = unique_word_string % | split: ","%}
       
 	{% for word in unique_word_array %}
-        <a href="#{{ word }}">{{ word }}</a>
+        {{ word }}
 		</br>
         {% endfor %}
      	
