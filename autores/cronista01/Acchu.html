@@ -36,7 +36,8 @@ data: palabra01
             </tr>
       </tbody>
     </table>
-
+</div>
+	
 {% if page.data %}
 	
 <div id="palabras2">
@@ -52,9 +53,32 @@ data: palabra01
         {% endfor %}
       </nav>	
 </div>
-{% endif %}
+
+	
+<div id="tables">
+	
+    <table>
+          <thead>
+            <tr>
+              <th>Lengua</th>
+            </tr>
+          </thead>
+      <tbody>
+          {% for row in rows %}
+          {% if row.Palabra == page.title %}
+            <tr>
+              <td>{{ row.Lengua }}</td>	    
+            </tr>
+          {% endif %}
+          {% endfor %}
+      </tbody>
+    </table>
     
 </div>
+	
+{% endif %}
+    
+
 	
 
 
