@@ -35,11 +35,14 @@ layout: default
             </tr>
         </thead>
 	 
+	{% for word in unique_word_array %}
+	{% if row.Palabra == word% %}
 	<tbody>
         	<tr>	
 			<td>{{ word }}</td>
             	</tr>	
-
+	{% endif %}
+	{% endfor %}
         </tbody>
 </table>
 
@@ -48,5 +51,5 @@ layout: default
 		
 </section>
 </div>
-{% endif %}
+
 </article>
